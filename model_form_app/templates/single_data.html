@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+{% block content %}
+Name   :  {{data.name}}<br>
+Mobile  : {{data.mobile}}<br>
+E-Mail  : {{data.per_email}}<br>
+Age     : {{data.age}}<br>
+Address : {{data.address}}<br>
+Country : {{data.country}}<br>
+photo   : <img src="{{data.profile_pic.url}}" ><br>
+<a href="{% url 'update_data' data.id %}"><button type="submit">Update</button></a>&emsp;&emsp;&emsp;
+<a href="{% url 'delete_user' data.id %}"><button type="submit">Delete</button></a>&emsp;&emsp;&emsp;
+{% endblock %}

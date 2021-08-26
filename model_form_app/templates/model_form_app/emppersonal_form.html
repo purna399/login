@@ -1,0 +1,8 @@
+<form method='POST' enctype="multipart/form-data">
+    {% csrf_token %}
+<body bgcolor="yellow"></body>
+<table>{{form.as_table}}</table>
+<label for="password">Password:</label><br>
+<input type="text" id="password" name="password"><br>
+<input type='submit'>
+</form>

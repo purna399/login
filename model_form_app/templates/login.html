@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% block content %}
+<form action="" method = 'POST'> 
+    {% csrf_token %}
+    <body bgcolor="Yellow"></body>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br>
+    <input type='Submit' value='Login'> &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="{% url 'user_send_email' %}">Forgot Password</a>
+</form>
+{% endblock %}
